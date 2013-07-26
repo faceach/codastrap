@@ -475,6 +475,16 @@ lead: "Global CSS settings, fundamental HTML elements styled and enhanced with e
 <p class="lead">...</p>
 {% endhighlight %}
 
+    <!-- Body copy .source -->
+    <h3>Source</h3>
+    <p>In conjunction with a lead body copy to describe the source of a quote by adding <code>.source</code>.</p>
+    <div class="bs-example">
+      <p class="source">- MAURICIO ESTRELLA, CHAOS DIRECTOR</p>
+    </div>
+{% highlight html %}
+<p class="source">...</p>
+{% endhighlight %}
+
     <!-- Using LESS -->
     <h3>Built with Less</h3>
     <p>The typographic scale is based on two LESS variables in <strong>variables.less</strong>: <code>@font-size-base</code> and <code>@line-height-base</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Bootstrap adapts.</p>
@@ -2007,12 +2017,10 @@ For example, <code>&lt;section&gt;</code> should be wrapped as inline.
     <div class="bs-example bs-example-images">
       <img data-src="holder.js/140x140" class="img-rounded">
       <img data-src="holder.js/140x140" class="img-circle">
-      <img data-src="holder.js/140x140" class="img-thumbnail">
     </div>
 {% highlight html %}
 <img src="..." class="img-rounded">
 <img src="..." class="img-circle">
-<img src="..." class="img-thumbnail">
 {% endhighlight %}
 
   </div>
