@@ -4,23 +4,24 @@
 <meta name="author" content="">
 
 <title>
-  {% if page.title == "Bootstrap" %}
+  {% if page.title == "CODA" %}
     {{ page.title }}
   {% else if %}
-    {{ page.title }} &middot; Bootstrap
+    {{ page.title }} &middot; CODA
   {% endif %}
 </title>
 
 <!-- Bootstrap core CSS -->
 <!--link href="/dist/css/bootstrap.css" rel="stylesheet"-->
 <link rel="stylesheet/less" type="text/css" href="/less/bootstrap.less">
-<script type="text/javascript" src="/helper/less-1.4.1.min.js"></script>
 
 {% if page.layout != "example" %}
 <!-- Documentation extras -->
 <link href="/assets/css/docs.css" rel="stylesheet">
 <link href="/assets/css/pygments-manni.css" rel="stylesheet">
 {% endif %}
+
+<script type="text/javascript" src="/helper/less-1.4.1.min.js"></script>
 
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

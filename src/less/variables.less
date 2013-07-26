@@ -19,6 +19,7 @@
 // -------------------------
 
 @brand-primary:         #ec008c;
+@brand-active:			#00c3ed;
 @brand-success:         #8aca01;
 @brand-warning:         #ff9000;
 @brand-danger:          #ff0054;
@@ -84,15 +85,17 @@
 // Tables
 // -------------------------
 
-@table-cell-padding:                 8px;
+@table-cell-padding-horizontal:		 8px;
+@table-cell-padding-vertical:        11px;
 @table-condensed-cell-padding:       5px;
 
 @table-bg:                           transparent; // overall background-color
-@table-bg-accent:                    #f9f9f9; // for striping
-@table-bg-hover:                     #f5f5f5;
+@table-bg-accent:                    #f7f7f7; // for striping
+@table-bg-hover:                     @brand-active;
 @table-bg-active:                    @table-bg-hover;
 
-@table-border-color:                 #ddd; // table and cell border
+@table-border-color:                 #d9d9d9; // table and cell border
+@table-headborder-color:             darken(@table-border-color, 15%); // #b2b2b2
 
 
 // Buttons
@@ -250,19 +253,19 @@
 // -------------------------
 
 @state-warning-text:             #c09853;
-@state-warning-bg:               #fcf8e3;
+@state-warning-bg:               @brand-warning;
 @state-warning-border:           darken(spin(@state-warning-bg, -10), 3%);
 
 @state-danger-text:              #b94a48;
-@state-danger-bg:                #f2dede;
+@state-danger-bg:                @brand-danger;
 @state-danger-border:            darken(spin(@state-danger-bg, -10), 3%);
 
 @state-success-text:             #468847;
-@state-success-bg:               #dff0d8;
+@state-success-bg:               @brand-success;
 @state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
 @state-info-text:                #3a87ad;
-@state-info-bg:                  #d9edf7;
+@state-info-bg:                  @brand-info;
 @state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
 
