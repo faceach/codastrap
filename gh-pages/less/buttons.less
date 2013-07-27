@@ -1,0 +1,37 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Core styles
+.btn {
+  border-width: 0;
+  font-size: @font-size-small;
+  font-weight: 400;
+  line-height: 20px;
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    .opacity(.4);
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-xlarge {
+  padding: @padding-xlarge-vertical @padding-xlarge-horizontal;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  border-radius: @border-radius-xlarge;
+}
+.btn-large {
+  font-size: @font-size-small;
+}
+.btn-small {
+  line-height: 20px;
+}
