@@ -19,7 +19,7 @@
 // -------------------------
 
 @brand-primary:         #ec008c;
-@brand-active:			#00c3ed;
+@brand-active:          #00c3ed;
 @brand-success:         #8aca01;
 @brand-warning:         #ff9000;
 @brand-danger:          #ff0054;
@@ -28,8 +28,21 @@
 // Brand Colors Status
 // -------------------------
 
-@status-disable: 		40%;
-@status-active: 		40%;
+@status-disabled-fadeout: 		40%;
+
+@brand-primary-active:  darken(@brand-primary);
+@brand-active-active:   darken(@brand-active);
+@brand-success-active:  darken(@brand-success);
+@brand-warning-active:  darken(@brand-warning);
+@brand-danger-active:   darken(@brand-danger);
+@brand-info-active:     darken(@brand-info);
+
+@brand-primary-disabled:  fadeout(@brand-primary, @status-disabled-fadeout);
+@brand-active-disabled:   fadeout(@brand-active, @status-disabled-fadeout);
+@brand-success-disabled:  fadeout(@brand-success, @status-disabled-fadeout);
+@brand-warning-disabled:  fadeout(@brand-warning, @status-disabled-fadeout);
+@brand-danger-disabled:   fadeout(@brand-danger, @status-disabled-fadeout);
+@brand-info-disabled:     fadeout(@brand-info, @status-disabled-fadeout);
 
 // Scaffolding
 // -------------------------
