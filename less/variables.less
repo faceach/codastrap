@@ -28,21 +28,22 @@
 // Brand Colors Status
 // -------------------------
 
+@status-active-darken: 			10%;
 @status-disabled-fadeout: 		40%;
 
-@brand-primary-active:  darken(@brand-primary);
-@brand-active-active:   darken(@brand-active);
-@brand-success-active:  darken(@brand-success);
-@brand-warning-active:  darken(@brand-warning);
-@brand-danger-active:   darken(@brand-danger);
-@brand-info-active:     darken(@brand-info);
+@brand-primary-active:  darken(@brand-primary, @status-active-darken);
+@brand-active-active:   darken(@brand-active, @status-active-darken);
+@brand-success-active:  darken(@brand-success, @status-active-darken);
+@brand-warning-active:  darken(@brand-warning, @status-active-darken);
+@brand-danger-active:   darken(@brand-danger, @status-active-darken);
+@brand-info-active:     darken(@brand-info, @status-active-darken);
 
-@brand-primary-disabled:  fadeout(@brand-primary, @status-disabled-fadeout);
-@brand-active-disabled:   fadeout(@brand-active, @status-disabled-fadeout);
-@brand-success-disabled:  fadeout(@brand-success, @status-disabled-fadeout);
-@brand-warning-disabled:  fadeout(@brand-warning, @status-disabled-fadeout);
-@brand-danger-disabled:   fadeout(@brand-danger, @status-disabled-fadeout);
-@brand-info-disabled:     fadeout(@brand-info, @status-disabled-fadeout);
+@brand-primary-disabled:  fadeout(@brand-primary-active, @status-disabled-fadeout);
+@brand-active-disabled:   fadeout(@brand-active-active, @status-disabled-fadeout);
+@brand-success-disabled:  fadeout(@brand-success-active, @status-disabled-fadeout);
+@brand-warning-disabled:  fadeout(@brand-warning-active, @status-disabled-fadeout);
+@brand-danger-disabled:   fadeout(@brand-danger-active, @status-disabled-fadeout);
+@brand-info-disabled:     fadeout(@brand-info-active, @status-disabled-fadeout);
 
 // Scaffolding
 // -------------------------
