@@ -18,6 +18,7 @@
 // Brand colors
 // -------------------------
 
+@brand-default: 		#4a4a4a;
 @brand-primary:         #ec008c;
 @brand-active:          #00c3ed;
 @brand-success:         #8aca01;
@@ -31,6 +32,7 @@
 @status-active-darken: 			10%;
 @status-disabled-fadeout: 		40%;
 
+@brand-default-active: 	darken(@brand-default, @status-active-darken);
 @brand-primary-active:  darken(@brand-primary, @status-active-darken);
 @brand-active-active:   darken(@brand-active, @status-active-darken);
 @brand-success-active:  darken(@brand-success, @status-active-darken);
@@ -38,18 +40,19 @@
 @brand-danger-active:   darken(@brand-danger, @status-active-darken);
 @brand-info-active:     darken(@brand-info, @status-active-darken);
 
-@brand-primary-disabled:  fadeout(@brand-primary-active, @status-disabled-fadeout);
-@brand-active-disabled:   fadeout(@brand-active-active, @status-disabled-fadeout);
-@brand-success-disabled:  fadeout(@brand-success-active, @status-disabled-fadeout);
-@brand-warning-disabled:  fadeout(@brand-warning-active, @status-disabled-fadeout);
-@brand-danger-disabled:   fadeout(@brand-danger-active, @status-disabled-fadeout);
-@brand-info-disabled:     fadeout(@brand-info-active, @status-disabled-fadeout);
+@brand-default-disabled:  fadeout(@brand-default, @status-disabled-fadeout);
+@brand-primary-disabled:  fadeout(@brand-primary, @status-disabled-fadeout);
+@brand-active-disabled:   fadeout(@brand-active, @status-disabled-fadeout);
+@brand-success-disabled:  fadeout(@brand-success, @status-disabled-fadeout);
+@brand-warning-disabled:  fadeout(@brand-warning, @status-disabled-fadeout);
+@brand-danger-disabled:   fadeout(@brand-danger, @status-disabled-fadeout);
+@brand-info-disabled:     fadeout(@brand-info, @status-disabled-fadeout);
 
 // Scaffolding
 // -------------------------
 
 @body-bg:               #fff;
-@text-color:            @gray;
+@text-color:            @brand-default;
 
 // Links
 // -------------------------
@@ -122,7 +125,7 @@
 // -------------------------
 
 @btn-default-color:              #fff;
-@btn-default-bg:                 #4a4a4a;
+@btn-default-bg:                 @brand-default;
 @btn-default-border:             @btn-default-bg;
 
 @btn-primary-color:              @btn-default-color;
@@ -159,9 +162,9 @@
 
 @input-color-placeholder:        @gray-light;
 
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2));
-@input-height-large:             (ceil(@font-size-large * @line-height-base) + (@padding-large-vertical * 2));
-@input-height-small:             (ceil(@font-size-small * @line-height-base) + (@padding-small-vertical * 2));
+@input-height-base:              (@line-height-computed + ((@padding-base-vertical - 1) * 2) + 2);
+@input-height-large:             (@line-height-computed + ((@padding-large-vertical - 1) * 2) + 2);
+@input-height-small:             (@line-height-computed + ((@padding-small-vertical - 1) * 2) + 2);
 
 @legend-border-color:            #e5e5e5;
 
