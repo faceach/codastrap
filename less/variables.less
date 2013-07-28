@@ -25,6 +25,12 @@
 @brand-danger:          #ff0054;
 @brand-info:            #00c3ed; // Same as active
 
+// Brand Colors Status
+// -------------------------
+
+@status-disable: 		40%;
+@status-active: 		40%;
+
 // Scaffolding
 // -------------------------
 
@@ -45,12 +51,12 @@
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        Arial, Helvetica, sans-serif;
 
-@font-size-base:          14px;
-@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
-@font-size-large:         ceil(@font-size-base * 0.85); // ~12px
-@font-size-xlarge:        ceil(@font-size-base * 1.25); // ~18px
+@font-size-base:          12px;
+@font-size-small:         ceil(@font-size-base * 1); // ~12px
+@font-size-large:         ceil(@font-size-base * 1); // ~12px
+@font-size-xlarge:        ceil(@font-size-base * 1.16); // ~14px
 
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.6666666667; // 20/12
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
 @headings-font-family:    @font-family-sans-serif;
@@ -139,7 +145,7 @@
 
 @input-color-placeholder:        @gray-light;
 
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2));
 @input-height-large:             (ceil(@font-size-large * @line-height-base) + (@padding-large-vertical * 2) + 2);
 @input-height-small:             (ceil(@font-size-small * @line-height-base) + (@padding-small-vertical * 2) + 2);
 
