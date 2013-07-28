@@ -20,33 +20,36 @@
 
 @brand-default: 		#4a4a4a;
 @brand-primary:         #ec008c;
+@brand-trivia:       	#cccccc;
 @brand-active:          #00c3ed;
 @brand-success:         #8aca01;
 @brand-warning:         #ff9000;
 @brand-danger:          #ff0054;
 @brand-info:            #00c3ed; // Same as active
 
-// Brand Colors Status
+// Brand Colors Variant
 // -------------------------
 
-@status-active-darken: 			10%;
-@status-disabled-fadeout: 		40%;
+@brand-variant-dark:    20%;
+@brand-variant-light:   20%;
 
-@brand-default-active: 	darken(@brand-default, @status-active-darken);
-@brand-primary-active:  darken(@brand-primary, @status-active-darken);
-@brand-active-active:   darken(@brand-active, @status-active-darken);
-@brand-success-active:  darken(@brand-success, @status-active-darken);
-@brand-warning-active:  darken(@brand-warning, @status-active-darken);
-@brand-danger-active:   darken(@brand-danger, @status-active-darken);
-@brand-info-active:     darken(@brand-info, @status-active-darken);
+@brand-default-dark: 	darken(@brand-default, @brand-variant-dark);
+@brand-primary-dark:    darken(@brand-primary, @brand-variant-dark);
+@brand-trivia-dark:     darken(@brand-trivia, @brand-variant-dark);
+@brand-active-dark:     darken(@brand-active, @brand-variant-dark);
+@brand-success-dark:    darken(@brand-success, @brand-variant-dark);
+@brand-warning-dark:    darken(@brand-warning, @brand-variant-dark);
+@brand-danger-dark:     darken(@brand-danger, @brand-variant-dark);
+@brand-info-dark:       darken(@brand-info, @brand-variant-dark);
 
-@brand-default-disabled:  fadeout(@brand-default, @status-disabled-fadeout);
-@brand-primary-disabled:  fadeout(@brand-primary, @status-disabled-fadeout);
-@brand-active-disabled:   fadeout(@brand-active, @status-disabled-fadeout);
-@brand-success-disabled:  fadeout(@brand-success, @status-disabled-fadeout);
-@brand-warning-disabled:  fadeout(@brand-warning, @status-disabled-fadeout);
-@brand-danger-disabled:   fadeout(@brand-danger, @status-disabled-fadeout);
-@brand-info-disabled:     fadeout(@brand-info, @status-disabled-fadeout);
+@brand-default-light:   fadeout(@brand-default, @brand-variant-light);
+@brand-primary-light:   fadeout(@brand-primary, @brand-variant-light);
+@brand-trivia-light:    fadeout(@brand-trivia, @brand-variant-light);
+@brand-active-light:    fadeout(@brand-active, @brand-variant-light);
+@brand-success-light:   fadeout(@brand-success, @brand-variant-light);
+@brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
+@brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
+@brand-info-light:      fadeout(@brand-info, @brand-variant-light);
 
 // Scaffolding
 // -------------------------
@@ -157,7 +160,7 @@
 @input-bg:                       #fff;
 @input-bg-disabled:              @gray-lighter;
 
-@input-border:                   #ccc;
+@input-border:                   @brand-trivia;
 @input-border-radius:            @border-radius-base;
 
 @input-color-placeholder:        @gray-light;
