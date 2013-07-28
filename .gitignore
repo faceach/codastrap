@@ -1,6 +1,7 @@
 # Ignore compiled docs
 _gh_pages
 _site
+bootstrap
 
 # Numerous always-ignore extensions
 *.diff
