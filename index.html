@@ -1,71 +1,127 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Codastrap by faceach</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+<title>
+  
+    CODA
+  
+</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet/less" type="text/css" href="./less/bootstrap.less">
+
+<!-- Documentation extras -->
+<link href="./bootstrap/assets/css/docs.css" rel="stylesheet">
+<link href="./bootstrap/assets/css/pygments-manni.css" rel="stylesheet">
+
+<link href="./assets/css/docs.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src=".//bootstrap/assets/js/html5shiv.js"></script>
+  <script src=".//bootstrap/assets/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- Favicons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./bootstrap/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./bootstrap/assets/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./bootstrap/assets/ico/apple-touch-icon-72-precomposed.png">
+                <link rel="apple-touch-icon-precomposed" href="./bootstrap/assets/ico/apple-touch-icon-57-precomposed.png">
+                               <link rel="shortcut icon" href="./bootstrap/assets/ico/favicon.png">
+
+<script type="text/javascript" src="./assets/js/less-1.4.1.min.js"></script>
+
+    <!-- Place anything custom after this. -->
   </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Codastrap</h1>
-        <p>Basic UI Framework for Englishtown</p>
+  <body class="bs-docs-home">
 
-        <p class="view"><a href="https://github.com/faceach/codastrap">View the Project on GitHub <small>faceach/codastrap</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/faceach/codastrap/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/faceach/codastrap/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/faceach/codastrap">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/faceach">faceach</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+    <!-- Docs master nav -->
+    <div class="navbar navbar-inverse navbar-fixed-top bs-docs-nav">
+  <div class="container">
+    <a href="./" class="navbar-brand">CODA</a>
+    <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <div class="nav-collapse collapse bs-navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="./getting-started">Getting started</a>
+        </li>
+        <li>
+          <a href="./css">CSS</a>
+        </li>
+        <li>
+          <a href="./components">Components</a>
+        </li>
+        <li>
+          <a href="./javascript">JavaScript</a>
+        </li>
+        <li>
+          <a href="./customize">Customize</a>
+        </li>
+      </ul>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
+  </div>
+</div>
+
+
+    <!-- Page content of course! -->
+    <div class="bs-masthead">
+  <div class="container">
+    <h1>CODA</h1>
+    <p class="lead">Sleek, intuitive, and powerful mobile-first front-end framework for faster and easier web development.</p>
+  </div>
+</div>
+
+
+    <!-- Callout for the old docs link -->
+    <div class="bs-old-docs">
+  <div class="container">
+    <strong>
+      <a href="http://www.englishtown.com">Find our Website Here!</a>
+    </strong>
+    This project, called <strong>"CODA"</strong>, is something we've been trying to do for a while.
+  </div>
+</div>
+
+
+    <div class="container">
+      <ul class="bs-masthead-links">
+        <li>
+          <a href="" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'GitHub project']);">GitHub project</a>
+        </li>
+        <li>
+          <a href="" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Examples']);">Examples</a>
+        </li>
+        <li>
+          <a href="" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Glyphicons']);">Glyphicons</a>
+        </li>
+        <li>
+          <a href="" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Jumbotron links', 'Expo']);">Bootstrap Expo</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="./bootstrap/assets/js/jquery.js"></script>
+<script src="./bootstrap/dist/js/bootstrap.js"></script>
+
+<script src="./bootstrap/assets/js/holder.js"></script>
+
+<script src="./bootstrap/assets/js/application.js"></script>
+
+
+
   </body>
 </html>
