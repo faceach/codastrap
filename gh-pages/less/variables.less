@@ -18,18 +18,44 @@
 // Brand colors
 // -------------------------
 
+@brand-default: 		#4a4a4a;
 @brand-primary:         #ec008c;
-@brand-active:			#00c3ed;
+@brand-trivia:       	#cccccc;
+@brand-active:          #00c3ed;
 @brand-success:         #8aca01;
 @brand-warning:         #ff9000;
 @brand-danger:          #ff0054;
 @brand-info:            #00c3ed; // Same as active
 
+// Brand Colors Variant
+// -------------------------
+
+@brand-variant-dark:    20%;
+@brand-variant-light:   20%;
+
+@brand-default-dark: 	darken(@brand-default, @brand-variant-dark);
+@brand-primary-dark:    darken(@brand-primary, @brand-variant-dark);
+@brand-trivia-dark:     darken(@brand-trivia, @brand-variant-dark);
+@brand-active-dark:     darken(@brand-active, @brand-variant-dark);
+@brand-success-dark:    darken(@brand-success, @brand-variant-dark);
+@brand-warning-dark:    darken(@brand-warning, @brand-variant-dark);
+@brand-danger-dark:     darken(@brand-danger, @brand-variant-dark);
+@brand-info-dark:       darken(@brand-info, @brand-variant-dark);
+
+@brand-default-light:   fadeout(@brand-default, @brand-variant-light);
+@brand-primary-light:   fadeout(@brand-primary, @brand-variant-light);
+@brand-trivia-light:    fadeout(@brand-trivia, @brand-variant-light);
+@brand-active-light:    fadeout(@brand-active, @brand-variant-light);
+@brand-success-light:   fadeout(@brand-success, @brand-variant-light);
+@brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
+@brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
+@brand-info-light:      fadeout(@brand-info, @brand-variant-light);
+
 // Scaffolding
 // -------------------------
 
 @body-bg:               #fff;
-@text-color:            @gray;
+@text-color:            @brand-default;
 
 // Links
 // -------------------------
@@ -45,12 +71,12 @@
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
 @font-family-base:        Arial, Helvetica, sans-serif;
 
-@font-size-base:          14px;
-@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
-@font-size-large:         ceil(@font-size-base * 0.85); // ~12px
-@font-size-xlarge:        ceil(@font-size-base * 1.25); // ~18px
+@font-size-base:          12px;
+@font-size-small:         ceil(@font-size-base * 1); // ~12px
+@font-size-large:         ceil(@font-size-base * 1); // ~12px
+@font-size-xlarge:        ceil(@font-size-base * 1.16); // ~14px
 
-@line-height-base:        1.428571429; // 20/14
+@line-height-base:        1.6666666667; // 20/12
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
 @headings-font-family:    @font-family-sans-serif;
@@ -102,7 +128,7 @@
 // -------------------------
 
 @btn-default-color:              #fff;
-@btn-default-bg:                 #4a4a4a;
+@btn-default-bg:                 @brand-default;
 @btn-default-border:             @btn-default-bg;
 
 @btn-primary-color:              @btn-default-color;
@@ -134,14 +160,14 @@
 @input-bg:                       #fff;
 @input-bg-disabled:              @gray-lighter;
 
-@input-border:                   #ccc;
+@input-border:                   @brand-trivia;
 @input-border-radius:            @border-radius-base;
 
 @input-color-placeholder:        @gray-light;
 
-@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
-@input-height-large:             (ceil(@font-size-large * @line-height-base) + (@padding-large-vertical * 2) + 2);
-@input-height-small:             (ceil(@font-size-small * @line-height-base) + (@padding-small-vertical * 2) + 2);
+@input-height-base:              (@line-height-computed + ((@padding-base-vertical - 1) * 2) + 2);
+@input-height-large:             (@line-height-computed + ((@padding-large-vertical - 1) * 2) + 2);
+@input-height-small:             (@line-height-computed + ((@padding-small-vertical - 1) * 2) + 2);
 
 @legend-border-color:            #e5e5e5;
 
