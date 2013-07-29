@@ -25,11 +25,12 @@
 @brand-success:         #8aca01;
 @brand-warning:         #ff9000;
 @brand-danger:          #ff0054;
-@brand-info:            #00c3ed; // Same as active
+@brand-info:            @brand-active; // Same as active
 
 // Brand Colors Variant
 // -------------------------
 
+/*
 @brand-variant-dark:    20%;
 @brand-variant-light:   20%;
 
@@ -50,6 +51,27 @@
 @brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
 @brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
 @brand-info-light:      fadeout(@brand-info, @brand-variant-light);
+*/
+
+@brand-default-dark: 	#6a6a6a;
+@brand-primary-dark:   	#fe089a;
+@brand-trivia-dark:   	@gray-light;
+@brand-active-dark:   	#00d2ff;
+@brand-success-dark:   	#9ce500;
+@brand-warning-dark:   	#ffae00;
+@brand-danger-dark:   	#ff42a6;
+@brand-info-dark:   	@brand-active-dark;
+
+@brand-variant-light:   40%;
+
+@brand-default-light:   fadeout(@brand-default, @brand-variant-light);
+@brand-primary-light:   fadeout(@brand-primary, @brand-variant-light);
+@brand-trivia-light:    fadeout(@brand-trivia, @brand-variant-light);
+@brand-active-light:    fadeout(@brand-active, @brand-variant-light);
+@brand-success-light:   fadeout(@brand-success, @brand-variant-light);
+@brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
+@brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
+@brand-info-light:      fadeout(@brand-info, @brand-variant-light);
 
 // Scaffolding
 // -------------------------
@@ -61,7 +83,7 @@
 // -------------------------
 
 @link-color:            #186abe;
-@link-hover-color:      darken(@link-color, 15%);
+@link-hover-color:      #1d7ddf;
 
 // Typography
 // -------------------------
@@ -107,7 +129,7 @@
 @border-radius-small:            0;
 @border-radius-xlarge:           0;
 
-@component-active-bg:            @brand-primary;
+@component-active-bg:            @brand-active;
 
 
 // Tables
@@ -260,13 +282,50 @@
 @navbar-inverse-search-border:              @navbar-inverse-bg;
 @navbar-inverse-search-placeholder-color:   #ccc;
 
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:            #333;
+@navbar-inverse-toggle-icon-bar-bg:         #fff;
+@navbar-inverse-toggle-border-color:        #333;
+
+
+// Navs
+// -------------------------
+
+@nav-link-hover-bg:                         @gray-lighter;
+
+@nav-disabled-link-color:                   @gray-light;
+@nav-disabled-link-hover-color:             @gray-light;
+
+@nav-open-link-hover-color:                 #fff;
+@nav-open-caret-border-color:               #fff;
+
+// Tabs
+@nav-tabs-border-color:                     #ddd;
+
+@nav-tabs-link-hover-border-color:          @gray-lighter;
+
+@nav-tabs-active-link-hover-bg:             @body-bg;
+@nav-tabs-active-link-hover-color:          @gray;
+@nav-tabs-active-link-hover-border-color:   #ddd;
+
+@nav-tabs-justified-link-border-color:            #ddd;
+@nav-tabs-justified-active-link-border-color:     @body-bg;
+
+// Pills
+@nav-pills-active-link-hover-bg:            @component-active-bg;
+@nav-pills-active-link-hover-color:         #fff;
+
 
 // Pagination
 // -------------------------
 
-@pagination-bg:                        #fff;
-@pagination-border:                    #ddd;
-@pagination-active-bg:                 #f5f5f5;
+@pagination-color:              #fff;
+@pagination-bg:                        @brand-default;
+@pagination-border:                    transparent;
+@pagination-hover-bg:                  #595959;
+@pagination-active-bg:                 @component-active-bg;
+@pagination-active-color:              #fff;
+@pagination-disabled-color:            #fff;
 
 
 // Jumbotron
@@ -445,9 +504,9 @@
 
 // Breadcrumbs
 // -------------------------
-@breadcrumb-bg:               #f5f5f5;
-@breadcrumb-color:            #ccc;
-@breadcrumb-active-color:     @gray-light;
+@breadcrumb-bg:               transparent;
+@breadcrumb-color:            @brand-default;
+@breadcrumb-active-color:     @brand-default;
 
 
 // Carousel
