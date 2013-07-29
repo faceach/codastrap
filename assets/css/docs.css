@@ -494,7 +494,8 @@ body {
 .bs-example > .dropdown > .dropdown-menu,
 .bs-example-submenu > .pull-left > .dropup > .dropdown-menu,
 .bs-example-submenu > .pull-left > .dropdown > .dropdown-menu {
-  position: static;
+  /* set to relative to keep the arrow inside dropdown */
+  position: relative;
   display: block;
   margin-bottom: 5px;
 }
