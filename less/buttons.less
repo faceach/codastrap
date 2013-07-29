@@ -10,6 +10,7 @@
 .btn {
   border-width: 0;
   font-weight: 400;
+  padding: @padding-base-vertical @padding-base-horizontal * @padding-button-scale;
 
   &.disabled,
   &[disabled],
@@ -22,16 +23,18 @@
 // --------------------------------------------------
 
 .btn-xlarge {
-  padding: @padding-xlarge-vertical @padding-xlarge-horizontal;
+  padding: @padding-xlarge-vertical @padding-xlarge-horizontal * @padding-button-scale;
   font-size: @font-size-xlarge;
   line-height: @line-height-computed;
   border-radius: @border-radius-xlarge;
 }
 .btn-large {
+  padding: @padding-large-vertical @padding-large-horizontal * @padding-button-scale;
   font-size: @font-size-large;
   line-height: @line-height-computed;
 }
 .btn-small {
+  padding: @padding-small-vertical @padding-small-horizontal * @padding-button-scale;
   font-size: @font-size-small;
   line-height: @line-height-computed;
 }
