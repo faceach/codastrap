@@ -18,72 +18,23 @@
 // Brand colors
 // -------------------------
 
-@brand-default: 		#4a4a4a;
-@brand-primary:         #ec008c;
-@brand-trivia:       	#cccccc;
-@brand-active:          #00c3ed;
-@brand-success:         #8aca01;
-@brand-warning:         #ff9000;
-@brand-danger:          #ff0054;
-@brand-info:            @brand-active; // Same as active
-
-// Brand Colors Variant
-// -------------------------
-
-/*
-@brand-variant-dark:    20%;
-@brand-variant-light:   20%;
-
-@brand-default-dark: 	darken(@brand-default, @brand-variant-dark);
-@brand-primary-dark:    darken(@brand-primary, @brand-variant-dark);
-@brand-trivia-dark:     darken(@brand-trivia, @brand-variant-dark);
-@brand-active-dark:     darken(@brand-active, @brand-variant-dark);
-@brand-success-dark:    darken(@brand-success, @brand-variant-dark);
-@brand-warning-dark:    darken(@brand-warning, @brand-variant-dark);
-@brand-danger-dark:     darken(@brand-danger, @brand-variant-dark);
-@brand-info-dark:       darken(@brand-info, @brand-variant-dark);
-
-@brand-default-light:   fadeout(@brand-default, @brand-variant-light);
-@brand-primary-light:   fadeout(@brand-primary, @brand-variant-light);
-@brand-trivia-light:    fadeout(@brand-trivia, @brand-variant-light);
-@brand-active-light:    fadeout(@brand-active, @brand-variant-light);
-@brand-success-light:   fadeout(@brand-success, @brand-variant-light);
-@brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
-@brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
-@brand-info-light:      fadeout(@brand-info, @brand-variant-light);
-*/
-
-@brand-default-dark: 	#6a6a6a;
-@brand-primary-dark:   	#fe089a;
-@brand-trivia-dark:   	@gray-light;
-@brand-active-dark:   	#00d2ff;
-@brand-success-dark:   	#9ce500;
-@brand-warning-dark:   	#ffae00;
-@brand-danger-dark:   	#ff42a6;
-@brand-info-dark:   	@brand-active-dark;
-
-@brand-variant-light:   40%;
-
-@brand-default-light:   fadeout(@brand-default, @brand-variant-light);
-@brand-primary-light:   fadeout(@brand-primary, @brand-variant-light);
-@brand-trivia-light:    fadeout(@brand-trivia, @brand-variant-light);
-@brand-active-light:    fadeout(@brand-active, @brand-variant-light);
-@brand-success-light:   fadeout(@brand-success, @brand-variant-light);
-@brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
-@brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
-@brand-info-light:      fadeout(@brand-info, @brand-variant-light);
+@brand-primary:         #428bca;
+@brand-success:         #5cb85c;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+@brand-info:            #5bc0de;
 
 // Scaffolding
 // -------------------------
 
 @body-bg:               #fff;
-@text-color:            @brand-default;
+@text-color:            @gray-dark;
 
 // Links
 // -------------------------
 
-@link-color:            #186abe;
-@link-hover-color:      #1d7ddf;
+@link-color:            @brand-primary;
+@link-hover-color:      darken(@link-color, 15%);
 
 // Typography
 // -------------------------
@@ -91,17 +42,16 @@
 @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 @font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
-@font-family-base:        Arial, Helvetica, sans-serif;
+@font-family-base:        @font-family-sans-serif;
 
-@font-size-base:          12px;
-@font-size-small:         ceil(@font-size-base * 1); // ~12px
-@font-size-large:         ceil(@font-size-base * 1); // ~12px
-@font-size-xlarge:        ceil(@font-size-base * 1.16); // ~14px
+@font-size-base:          14px;
+@font-size-large:         ceil(@font-size-base * 1.25); // ~18px
+@font-size-small:         ceil(@font-size-base * 0.85); // ~12px
 
-@line-height-base:        1.6666666667; // 20/12
+@line-height-base:        1.428571429; // 20/14
 @line-height-computed:    floor(@font-size-base * @line-height-base); // ~20px
 
-@headings-font-family:    @font-family-sans-serif;
+@headings-font-family:    @font-family-base;
 @headings-font-weight:    500;
 @headings-line-height:    1.1;
 
@@ -110,73 +60,61 @@
 // -------------------------
 // Based on 14px font-size and 1.428 line-height (~20px to start)
 
+@padding-base-vertical:          8px;
+@padding-base-horizontal:        12px;
+
+@padding-large-vertical:         14px;
+@padding-large-horizontal:       16px;
+
 @padding-small-vertical:         5px;
 @padding-small-horizontal:       10px;
 
-@padding-base-vertical:          10px;
-@padding-base-horizontal:        20px;
+@border-radius-base:             4px;
+@border-radius-large:            6px;
+@border-radius-small:            3px;
 
-@padding-large-vertical:         15px;
-@padding-large-horizontal:       30px;
-
-@padding-xlarge-vertical:        20px;
-@padding-xlarge-horizontal:      40px;
-
-@border-radius-base:             0;
-@border-radius-large:            0;
-@border-radius-small:            0;
-@border-radius-xlarge:           0;
-
-@component-active-bg:            @brand-active;
+@component-active-bg:            @brand-primary;
 
 
 // Tables
 // -------------------------
 
-@table-cell-padding-horizontal:		 8px;
-@table-cell-padding-vertical:        11px;
+@table-cell-padding:                 8px;
 @table-condensed-cell-padding:       5px;
 
 @table-bg:                           transparent; // overall background-color
-@table-bg-accent:                    #f7f7f7; // for striping
-@table-bg-hover:                     #ececed;
-@table-bg-active:                    @component-active-bg;
+@table-bg-accent:                    #f9f9f9; // for striping
+@table-bg-hover:                     #f5f5f5;
+@table-bg-active:                    @table-bg-hover;
 
-@table-border-color:                 #d9d9d9; // table and cell border
-@table-headborder-color:             darken(@table-border-color, 15%); // #b2b2b2
+@table-border-color:                 #ddd; // table and cell border
 
 
 // Buttons
 // -------------------------
 
 @btn-default-color:              #fff;
-@btn-default-bg:                 @brand-default;
-@btn-default-bg-hover:           @brand-default-dark;
+@btn-default-bg:                 #474949;
 @btn-default-border:             @btn-default-bg;
 
 @btn-primary-color:              @btn-default-color;
 @btn-primary-bg:                 @brand-primary;
-@btn-primary-bg-hover:           @brand-primary-dark;
 @btn-primary-border:             @btn-primary-bg;
 
 @btn-success-color:              @btn-default-color;
 @btn-success-bg:                 @brand-success;
-@btn-success-bg-hover:           @brand-success-dark;
 @btn-success-border:             @btn-success-bg;
 
 @btn-warning-color:              @btn-default-color;
 @btn-warning-bg:                 @brand-warning;
-@btn-warning-bg-hover:           @brand-warning-dark;
 @btn-warning-border:             @btn-warning-bg;
 
 @btn-danger-color:               @btn-default-color;
 @btn-danger-bg:                  @brand-danger;
-@btn-danger-bg-hover:            @brand-danger-dark;
 @btn-danger-border:              @btn-danger-bg;
 
 @btn-info-color:                 @btn-default-color;
 @btn-info-bg:                    @brand-info;
-@btn-info-bg-hover:              @brand-info-dark;
 @btn-info-border:                @btn-info-bg;
 
 @btn-hover-color:                @btn-default-color;
@@ -188,16 +126,14 @@
 @input-bg:                       #fff;
 @input-bg-disabled:              @gray-lighter;
 
-@input-border:                   @brand-trivia;
+@input-border:                   #ccc;
 @input-border-radius:            @border-radius-base;
 
 @input-color-placeholder:        @gray-light;
 
-@input-height-base:              (@line-height-computed + ((@padding-base-vertical - 1) * 2) + 2);
-@input-height-large:             (@line-height-computed + ((@padding-large-vertical - 1) * 2) + 2);
-@input-height-small:             (@line-height-computed + ((@padding-small-vertical - 1) * 2) + 2);
-
-@input-padding-horizontal-scale: .5;
+@input-height-base:              (@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large:             (ceil(@font-size-large * @line-height-base) + (@padding-large-vertical * 2) + 2);
+@input-height-small:             (ceil(@font-size-small * @line-height-base) + (@padding-small-vertical * 2) + 2);
 
 @legend-border-color:            #e5e5e5;
 
@@ -259,13 +195,20 @@
 @navbar-link-disabled-bg:          transparent;
 
 // Navbar brand label
-@navbar-brand-font-size:           @font-size-base * 1.5;
 @navbar-brand-color:               @navbar-link-color;
 @navbar-brand-hover-color:         darken(@navbar-link-color, 10%);
 @navbar-brand-hover-bg:            transparent;
 
+// Navbar toggle
+@navbar-toggle-hover-bg:           #ddd;
+@navbar-toggle-icon-bar-bg:        #ccc;
+@navbar-toggle-border-color:       #ddd;
+
+
 // Inverted navbar
-@navbar-inverse-color:                       @gray-light;
+//
+// Reset inverted navbar basics
+@navbar-inverse-color:                      @gray-light;
 @navbar-inverse-bg:                         #222;
 
 // Inverted navbar links
@@ -326,13 +269,17 @@
 // Pagination
 // -------------------------
 
-@pagination-color:              #fff;
-@pagination-bg:                        @brand-default;
-@pagination-border:                    transparent;
-@pagination-hover-bg:                  #595959;
-@pagination-active-bg:                 @component-active-bg;
-@pagination-active-color:              #fff;
-@pagination-disabled-color:            #fff;
+@pagination-bg:                        #fff;
+@pagination-border:                    #ddd;
+@pagination-active-bg:                 #f5f5f5;
+@pagination-active-color:              @gray-light;
+@pagination-disabled-color:            @gray-light;
+
+// Pager
+// -------------------------
+
+@pager-border-radius:                  15px;
+@pager-disabled-color:                 @gray-light;
 
 
 // Jumbotron
@@ -346,38 +293,48 @@
 // Form states and alerts
 // -------------------------
 
-@state-warning-text:             #fff;
-@state-warning-bg:               @brand-warning;
-@state-warning-border:           @brand-warning;
+@state-warning-text:             #c09853;
+@state-warning-bg:               #fcf8e3;
+@state-warning-border:           darken(spin(@state-warning-bg, -10), 3%);
 
-@state-danger-text:              #fff;
-@state-danger-bg:                @brand-danger;
-@state-danger-border:            @brand-danger;
+@state-danger-text:              #b94a48;
+@state-danger-bg:                #f2dede;
+@state-danger-border:            darken(spin(@state-danger-bg, -10), 3%);
 
-@state-success-text:             #fff;
-@state-success-bg:               @brand-success;
-@state-success-border:           @brand-success;
+@state-success-text:             #468847;
+@state-success-bg:               #dff0d8;
+@state-success-border:           darken(spin(@state-success-bg, -10), 5%);
 
-@state-info-text:                #fff;
-@state-info-bg:                  @brand-info;
-@state-info-border:              @brand-info;
+@state-info-text:                #3a87ad;
+@state-info-bg:                  #d9edf7;
+@state-info-border:              darken(spin(@state-info-bg, -10), 7%);
 
 
-// Tooltips and popovers
+// Tooltips
 // -------------------------
+@tooltip-max-width:           200px;
 @tooltip-color:               #fff;
 @tooltip-bg:                  rgba(0,0,0,.9);
+
 @tooltip-arrow-width:         5px;
 @tooltip-arrow-color:         @tooltip-bg;
 
-@popover-bg:                  #fff;
-@popover-arrow-width:         10px;
-@popover-arrow-color:         #fff;
-@popover-title-bg:            darken(@popover-bg, 3%);
 
-// Special enhancement for popovers
-@popover-arrow-outer-width:   (@popover-arrow-width + 1);
-@popover-arrow-outer-color:   rgba(0,0,0,.25);
+// Popovers
+// -------------------------
+@popover-bg:                          #fff;
+@popover-max-width:                   276px;
+@popover-border-color:                rgba(0,0,0,.2);
+@popover-fallback-border-color:       #ccc;
+
+@popover-title-bg:                    darken(@popover-bg, 3%);
+
+@popover-arrow-width:                 10px;
+@popover-arrow-color:                 #fff;
+
+@popover-arrow-outer-width:           (@popover-arrow-width + 1);
+@popover-arrow-outer-color:           rgba(0,0,0,.25);
+@popover-arrow-outer-fallback-color:  #999;
 
 
 // Labels
@@ -410,27 +367,29 @@
 // Alerts
 // -------------------------
 @alert-bg:                    @state-warning-bg;
-@alert-text:                  #fff;
+@alert-text:                  @state-warning-text;
 @alert-border:                @state-warning-border;
 @alert-border-radius:         @border-radius-base;
 
 @alert-success-bg:            @state-success-bg;
-@alert-success-text:          #fff;
+@alert-success-text:          @state-success-text;
 @alert-success-border:        @state-success-border;
 
 @alert-danger-bg:             @state-danger-bg;
-@alert-danger-text:           #fff;
+@alert-danger-text:           @state-danger-text;
 @alert-danger-border:         @state-danger-border;
 
 @alert-info-bg:               @state-info-bg;
-@alert-info-text:             #fff;
+@alert-info-text:             @state-info-text;
 @alert-info-border:           @state-info-border;
 
 
 // Progress bars
 // -------------------------
-@progress-bg:                 #e5e5e5;
-@progress-bar-bg:             @brand-active;
+@progress-bg:                 #f5f5f5;
+@progress-bar-color:          #fff;
+
+@progress-bar-bg:             @brand-primary;
 @progress-bar-success-bg:     @brand-success;
 @progress-bar-warning-bg:     @brand-warning;
 @progress-bar-danger-bg:      @brand-danger;
@@ -511,9 +470,9 @@
 
 // Breadcrumbs
 // -------------------------
-@breadcrumb-bg:               transparent;
-@breadcrumb-color:            @brand-default;
-@breadcrumb-active-color:     @brand-default;
+@breadcrumb-bg:               #f5f5f5;
+@breadcrumb-color:            #ccc;
+@breadcrumb-active-color:     @gray-light;
 
 
 // Carousel
@@ -542,6 +501,14 @@
 @pre-bg:                      #f5f5f5;
 @pre-border-color:            #ccc;
 
+// Type
+// ------------------------
+@text-muted:                  @gray-light;
+@abbr-border-color:           @gray-light;
+@headings-small-color:        @gray-light;
+@blockquote-small-color:      @gray-light;
+@blockquote-border-color:     @gray-lighter;
+@page-header-border-color:    @gray-lighter;
 
 // Miscellaneous
 // -------------------------
