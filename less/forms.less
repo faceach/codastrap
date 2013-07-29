@@ -45,6 +45,20 @@
     .placeholder(@brand-active-light);
   }
 
+  &[disabled],
+    fieldset[disabled] & {
+    border-color: @brand-trivia-light;
+    color: @brand-trivia-light;
+    background-color: @body-bg;
+    .placeholder(@brand-trivia-light);
+    &:hover {
+    	border-color: @brand-trivia-light;
+	    color: @brand-trivia-light;
+	    background-color: @body-bg;
+	    .placeholder(@brand-trivia-light);
+    }
+  }
+
   select& {
     -webkit-appearance: none;
     color: contrast(@brand-default-dark);
@@ -74,8 +88,13 @@
     &[disabled],
     fieldset[disabled] & {
         color: @brand-default;
-        border-color: @brand-default-light;
+        border-color: transparent;
         background-color: @brand-default-light;
+        &:hover {
+        	color: @brand-default;
+	        border-color: transparent;
+	        background-color: @brand-default-light;
+        }
     }
   }
 }
