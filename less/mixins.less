@@ -3,6 +3,34 @@
 // --------------------------------------------------
 
 
+// Button pseudo states
+// -------------------------
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+.btn-pseudo-states(@color, @background, @hover-color) {
+  color: @color;
+  background-color: @background;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: @hover-color;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+      background-color: @background;
+    }
+  }
+}
+
 // GRADIENTS
 // --------------------------------------------------
 
