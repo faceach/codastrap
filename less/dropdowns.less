@@ -1,0 +1,52 @@
+//
+// Dropdown menus
+// --------------------------------------------------
+
+// The dropdown menu (ul)
+// ----------------------
+.dropdown-menu {
+  .box-shadow(none);
+  padding: 0;
+
+  .divider {
+    margin: 0;
+  }
+
+  > li > a {
+    padding: @padding-base-vertical @padding-base-horizontal;
+  }
+}
+
+// Hover/Focus state
+// -----------
+.dropdown-menu > li > a {
+  text-decoration: none;
+  outline: 0;
+
+  &:hover {
+    color: @dropdown-link-hover-color;
+    background: @dropdown-link-hover-bg;
+  }
+
+  &:focus {
+    color: @dropdown-link-hover-color;
+    background: @brand-active;
+  }
+}
+
+// Active state
+// ------------
+.dropdown-menu > .active > a {
+  &,
+  &:hover,
+  &:focus {
+    color: @dropdown-link-hover-color;
+    background: @brand-active;
+  }
+}
+
+// Dropdown section headers
+// ---------------------------
+.dropdown-header {
+  padding: @padding-base-vertical @padding-base-horizontal;
+}
