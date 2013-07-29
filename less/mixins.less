@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 
-
 // GRADIENTS
 // --------------------------------------------------
 
@@ -47,4 +46,13 @@
     border-color: @border-color;
     background-color: @background-color;
   }
+}
+
+// Form horizontal padding
+//
+// Used in forms.less to generate the form horizontal padding
+
+.input-horizontal-padding(@padding-horizontal) {
+    padding-left: @padding-horizontal * @input-padding-horizontal-scale;
+    padding-right: @padding-horizontal * @input-padding-horizontal-scale;
 }

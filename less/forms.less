@@ -26,10 +26,11 @@
 
 .form-control
 {
-  
+  .input-horizontal-padding(@padding-base-horizontal);
   border-color: @brand-trivia;
   color: @brand-trivia;
   .placeholder(@brand-trivia-light);
+  box-shadow: none;
 
   &:hover {
     border-color: @brand-trivia-dark;
@@ -87,10 +88,10 @@
 
 .form-control {
   &.input-large {
-    
+    .input-horizontal-padding(@padding-large-horizontal);
   }
   &.input-small {
-    
+    .input-horizontal-padding(@padding-small-horizontal);
   }
   select& {
 	  &.input-large {
@@ -131,3 +132,4 @@
     padding: @padding-large-vertical - 1 @padding-large-horizontal;
   }
 }
+

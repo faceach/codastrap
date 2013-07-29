@@ -38,11 +38,18 @@
 // -------------------------
 .nav-pills {
   > li {
-	    float: left;
 
 	    // Links rendered as pills
 	    > a {
 	      border-radius: @border-radius-base;
 	    }
 	}
+}
+
+// Move borders to anchors instead of bottom of list
+.nav-tabs-justified {
+  > li > a {
+    padding-bottom: 9px;
+    border-bottom-width: 1px;
+  }
 }

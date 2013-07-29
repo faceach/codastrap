@@ -110,19 +110,17 @@
 // -------------------------
 // Based on 14px font-size and 1.428 line-height (~20px to start)
 
-@padding-base-vertical:          10px;
-@padding-base-horizontal:        10px;
-
 @padding-small-vertical:         5px;
-@padding-small-horizontal:       5px;
+@padding-small-horizontal:       10px;
+
+@padding-base-vertical:          10px;
+@padding-base-horizontal:        20px;
 
 @padding-large-vertical:         15px;
-@padding-large-horizontal:       15px;
+@padding-large-horizontal:       30px;
 
 @padding-xlarge-vertical:        20px;
-@padding-xlarge-horizontal:      20px;
-
-@padding-button-scale:           1.8;
+@padding-xlarge-horizontal:      40px;
 
 @border-radius-base:             0;
 @border-radius-large:            0;
@@ -193,6 +191,8 @@
 @input-height-large:             (@line-height-computed + ((@padding-large-vertical - 1) * 2) + 2);
 @input-height-small:             (@line-height-computed + ((@padding-small-vertical - 1) * 2) + 2);
 
+@input-padding-horizontal-scale: .5;
+
 @legend-border-color:            #e5e5e5;
 
 @input-group-addon-border-color: @input-border;
@@ -253,6 +253,7 @@
 @navbar-link-disabled-bg:          transparent;
 
 // Navbar brand label
+@navbar-brand-font-size:           @font-size-base * 1.5;
 @navbar-brand-color:               @navbar-link-color;
 @navbar-brand-hover-color:         darken(@navbar-link-color, 10%);
 @navbar-brand-hover-bg:            transparent;
@@ -423,7 +424,7 @@
 // Progress bars
 // -------------------------
 @progress-bg:                 #e5e5e5;
-@progress-bar-bg:             @brand-primary;
+@progress-bar-bg:             @brand-active;
 @progress-bar-success-bg:     @brand-success;
 @progress-bar-warning-bg:     @brand-warning;
 @progress-bar-danger-bg:      @brand-danger;
