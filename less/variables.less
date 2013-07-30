@@ -27,51 +27,29 @@
 @brand-danger:          #ff0054;
 @brand-info:            @brand-active; // Same as active
 
-// Brand Colors Variant
+// Brand Colors States
 // -------------------------
 
-/*
-@brand-variant-dark:    20%;
-@brand-variant-light:   20%;
+@brand-variant-disable:   			40%;
+@brand-variant-disable-computed:	.4;
 
-@brand-default-dark: 	darken(@brand-default, @brand-variant-dark);
-@brand-primary-dark:    darken(@brand-primary, @brand-variant-dark);
-@brand-trivia-dark:     darken(@brand-trivia, @brand-variant-dark);
-@brand-active-dark:     darken(@brand-active, @brand-variant-dark);
-@brand-success-dark:    darken(@brand-success, @brand-variant-dark);
-@brand-warning-dark:    darken(@brand-warning, @brand-variant-dark);
-@brand-danger-dark:     darken(@brand-danger, @brand-variant-dark);
-@brand-info-dark:       darken(@brand-info, @brand-variant-dark);
+@brand-default-hover: 	#6a6a6a;
+@brand-primary-hover:	#fe089a;
+@brand-trivia-hover:   	@gray-light;
+@brand-active-hover:   	#00d2ff;
+@brand-success-hover:	#9ce500;
+@brand-warning-hover:	#ffae00;
+@brand-danger-hover:   	#ff426a;
+@brand-info-hover:   	@brand-active-hover;
 
-@brand-default-light:   fadeout(@brand-default, @brand-variant-light);
-@brand-primary-light:   fadeout(@brand-primary, @brand-variant-light);
-@brand-trivia-light:    fadeout(@brand-trivia, @brand-variant-light);
-@brand-active-light:    fadeout(@brand-active, @brand-variant-light);
-@brand-success-light:   fadeout(@brand-success, @brand-variant-light);
-@brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
-@brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
-@brand-info-light:      fadeout(@brand-info, @brand-variant-light);
-*/
-
-@brand-default-dark: 	#6a6a6a;
-@brand-primary-dark:   	#fe089a;
-@brand-trivia-dark:   	@gray-light;
-@brand-active-dark:   	#00d2ff;
-@brand-success-dark:   	#9ce500;
-@brand-warning-dark:   	#ffae00;
-@brand-danger-dark:   	#ff426a;
-@brand-info-dark:   	@brand-active-dark;
-
-@brand-variant-light:   40%;
-
-@brand-default-light:   fadeout(@brand-default, @brand-variant-light);
-@brand-primary-light:   fadeout(@brand-primary, @brand-variant-light);
-@brand-trivia-light:    fadeout(@brand-trivia, @brand-variant-light);
-@brand-active-light:    fadeout(@brand-active, @brand-variant-light);
-@brand-success-light:   fadeout(@brand-success, @brand-variant-light);
-@brand-warning-light:   fadeout(@brand-warning, @brand-variant-light);
-@brand-danger-light:    fadeout(@brand-danger, @brand-variant-light);
-@brand-info-light:      fadeout(@brand-info, @brand-variant-light);
+@brand-default-disable:   fadeout(@brand-default, @brand-variant-disable);
+@brand-primary-disable:   fadeout(@brand-primary, @brand-variant-disable);
+@brand-trivia-disable:    fadeout(@brand-trivia, @brand-variant-disable);
+@brand-active-disable:    fadeout(@brand-active, @brand-variant-disable);
+@brand-success-disable:   fadeout(@brand-success, @brand-variant-disable);
+@brand-warning-disable:   fadeout(@brand-warning, @brand-variant-disable);
+@brand-danger-disable:    fadeout(@brand-danger, @brand-variant-disable);
+@brand-info-disable:      fadeout(@brand-info, @brand-variant-disable);
 
 // Scaffolding
 // -------------------------
@@ -151,32 +129,32 @@
 
 @btn-default-color:              #fff;
 @btn-default-bg:                 @brand-default;
-@btn-default-bg-hover:           @brand-default-dark;
+@btn-default-bg-hover:           @brand-default-hover;
 @btn-default-border:             @btn-default-bg;
 
 @btn-primary-color:              @btn-default-color;
 @btn-primary-bg:                 @brand-primary;
-@btn-primary-bg-hover:           @brand-primary-dark;
+@btn-primary-bg-hover:           @brand-primary-hover;
 @btn-primary-border:             @btn-primary-bg;
 
 @btn-success-color:              @btn-default-color;
 @btn-success-bg:                 @brand-success;
-@btn-success-bg-hover:           @brand-success-dark;
+@btn-success-bg-hover:           @brand-success-hover;
 @btn-success-border:             @btn-success-bg;
 
 @btn-warning-color:              @btn-default-color;
 @btn-warning-bg:                 @brand-warning;
-@btn-warning-bg-hover:           @brand-warning-dark;
+@btn-warning-bg-hover:           @brand-warning-hover;
 @btn-warning-border:             @btn-warning-bg;
 
 @btn-danger-color:               @btn-default-color;
 @btn-danger-bg:                  @brand-danger;
-@btn-danger-bg-hover:            @brand-danger-dark;
+@btn-danger-bg-hover:            @brand-danger-hover;
 @btn-danger-border:              @btn-danger-bg;
 
 @btn-info-color:                 @btn-default-color;
 @btn-info-bg:                    @brand-info;
-@btn-info-bg-hover:              @brand-info-dark;
+@btn-info-bg-hover:              @brand-info-hover;
 @btn-info-border:                @btn-info-bg;
 
 @btn-hover-color:                @btn-default-color;
@@ -215,7 +193,7 @@
 @dropdown-link-active-color:     #fff;
 @dropdown-link-active-bg:        @brand-active;
 
-@dropdown-link-color:            contrast(@brand-default-dark);
+@dropdown-link-color:            contrast(@brand-default-hover);
 @dropdown-link-hover-color:      #fff;
 @dropdown-link-hover-bg:         darken(@brand-default, 10%);
 

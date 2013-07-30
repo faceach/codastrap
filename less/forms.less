@@ -29,12 +29,12 @@
   .input-horizontal-padding(@padding-base-horizontal);
   border-color: @brand-trivia;
   color: @brand-trivia;
-  .placeholder(@brand-trivia-light);
+  .placeholder(@brand-trivia-disable);
   box-shadow: none;
 
   &:hover {
-    border-color: @brand-trivia-dark;
-    color: @brand-trivia-dark;
+    border-color: @brand-trivia-hover;
+    color: @brand-trivia-hover;
     .placeholder(@brand-trivia);
   }
 
@@ -42,26 +42,26 @@
     border-color: @brand-active;
     color: @brand-active;
     .box-shadow(none);
-    .placeholder(@brand-active-light);
+    .placeholder(@brand-active-disable);
   }
 
   &[disabled],
     fieldset[disabled] & {
-    border-color: @brand-trivia-light;
-    color: @brand-trivia-light;
+    border-color: @brand-trivia-disable;
+    color: @brand-trivia-disable;
     background-color: @body-bg;
-    .placeholder(@brand-trivia-light);
+    .placeholder(@brand-trivia-disable);
     &:hover {
-    	border-color: @brand-trivia-light;
-	    color: @brand-trivia-light;
+    	border-color: @brand-trivia-disable;
+	    color: @brand-trivia-disable;
 	    background-color: @body-bg;
-	    .placeholder(@brand-trivia-light);
+	    .placeholder(@brand-trivia-disable);
     }
   }
 
   select& {
     -webkit-appearance: none;
-    color: contrast(@brand-default-dark);
+    color: contrast(@brand-default-hover);
     border-color: @brand-default;
     background: 
         @brand-default 
@@ -70,13 +70,13 @@
         ;
 
     &:hover {
-    	color: contrast(@brand-default-dark);
-        border-color: @brand-default-dark; 
-        background-color: @brand-default-dark;
+    	color: contrast(@brand-default-hover);
+        border-color: @brand-default-hover; 
+        background-color: @brand-default-hover;
     }
 
     &:focus {
-        color: contrast(@brand-default-dark);
+        color: contrast(@brand-default-hover);
         border-color: @brand-active; 
         background-color: @brand-active;
     }
@@ -89,11 +89,11 @@
     fieldset[disabled] & {
         color: @brand-default;
         border-color: transparent;
-        background-color: @brand-default-light;
+        background-color: @brand-default-disable;
         &:hover {
         	color: @brand-default;
 	        border-color: transparent;
-	        background-color: @brand-default-light;
+	        background-color: @brand-default-disable;
         }
     }
   }
